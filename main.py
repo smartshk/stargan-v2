@@ -210,21 +210,33 @@ if __name__ == '__main__':
     # parser.add_argument('--batch_size', type=int, default=4)
     # parser.add_argument('--img_size', type=int, default=256)
 
-    ### 002 Eval
-    parser.add_argument('--mode', type=str, default='eval')
+    # ### 002 Eval
+    # parser.add_argument('--mode', type=str, default='eval')
+    # parser.add_argument('--num_domains', type=int, default=2)
+    # parser.add_argument('--resume_iter', type=int, default=100000)
+    # parser.add_argument('--w_hpf', type=float, default=0)
+    # # parser.add_argument('--lambda_ds', type=float, default=1)
+    # parser.add_argument('--train_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A/train')
+    # parser.add_argument('--val_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A/valid')
+    # # parser.add_argument('--sample_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/samples')
+    # parser.add_argument('--checkpoint_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/checkpoints')
+    # parser.add_argument('--eval_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/eval')
+    # parser.add_argument('--batch_size', type=int, default=4)
+    # parser.add_argument('--img_size', type=int, default=256)
+
+    ## 003 Without to Aligner 512x512
+    parser.add_argument('--mode', type=str, default='train')
     parser.add_argument('--num_domains', type=int, default=2)
-    parser.add_argument('--resume_iter', type=int, default=100000)
+    parser.add_argument('--resume_iter', type=int, default=0)
     parser.add_argument('--w_hpf', type=float, default=0)
-    # parser.add_argument('--lambda_ds', type=float, default=1)
-    parser.add_argument('--train_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A/train')
-    parser.add_argument('--val_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A/valid')
-    # parser.add_argument('--sample_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/samples')
-    parser.add_argument('--checkpoint_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/checkpoints')
-    parser.add_argument('--eval_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/002_w2a/eval')
-    parser.add_argument('--batch_size', type=int, default=4)
-    parser.add_argument('--img_size', type=int, default=256)
-
-
+    parser.add_argument('--lambda_ds', type=float, default=1)
+    parser.add_argument('--train_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A-512/train')
+    parser.add_argument('--val_img_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Data/W2A-512/valid')
+    parser.add_argument('--sample_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/samples')
+    parser.add_argument('--checkpoint_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/checkpoints')
+    parser.add_argument('--eval_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/eval')
+    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--img_size', type=int, default=512)
 
     args = parser.parse_args()
     main(args)
