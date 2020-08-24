@@ -83,7 +83,7 @@ def calculate_metrics(nets, args, step, mode):
                         s_trg = nets.style_encoder(x_ref, y_trg)
 
                     x_fake = nets.generator(x_src, s_trg, masks=masks)
-                    group_of_images.append(x_fake.cpu)
+                    group_of_images.append(x_fake)
 
                     # save generated images to calculate FID later
                     for k in range(N):
