@@ -235,7 +235,7 @@ if __name__ == '__main__':
     parser.add_argument('--sample_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/samples')
     parser.add_argument('--checkpoint_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/checkpoints')
     parser.add_argument('--eval_dir', type=str, default='/opt/deeplearning/tai/StarGanV2/Models/003_w2a_512/eval')
-    parser.add_argument('--batch_size', type=int, default=2)
+    parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--img_size', type=int, default=512)
 
     args = parser.parse_args()
