@@ -91,6 +91,10 @@ def calculate_metrics(nets, args, step, mode):
                             path_fake,
                             '%.4i_%.2i.png' % (i*args.val_batch_size+(k+1), j+1))
                         utils.save_image(x_fake[k], ncol=1, filename=filename)
+                        if j == 0:
+                            utils.save_image(x_src[k], ncol=1,
+                                            filename=os.path.join(path_fake,
+                                                                  '%.4i_input.png' % (i*args.val_batch_size+(k+1))))
 
                 lpips_value = calculate_lpips_given_images(group_of_images)
                 lpips_values.append(lpips_value)
